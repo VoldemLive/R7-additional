@@ -25,7 +25,7 @@ class CustomersController < ApplicationController
     @customer = Customer.new(customer_params)
     if @customer.save
       flash.notice = "The customer record was created successfully."
-      redirect_to root_url
+      redirect_to customers_path
     else
       render :new, status: :unprocessable_entity
     end
