@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Orders</h1>
+
+<div id="orders" class="container-fluid row gap-2">
+  <% @orders.each do |order| %>
+    <div class="col-sm">
+    <%= render order %>
+    </div>
+  <% end %>
+</div>
+<div class="d-flex py-2">
+  <%= link_to "New order", new_order_path, class:"btn btn-primary" %>
+</div>
